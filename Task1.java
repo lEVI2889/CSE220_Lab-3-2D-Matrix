@@ -10,6 +10,30 @@ class Task1{
 
         int row = matrix.length;
         int col = matrix[0].length;
+        for(int j = 0; j<col; j++){
+            if(j%2==0){
+                for(int i = 0; i<row; i+=2){
+                    int num = matrix[i][j];
+                    System.out.print(matrix[i][j]+" ");
+                }
+            }
+            else{
+                if(row%2==0){
+                    for (int i = row - 1; i >= 0; i -= 2) {
+                        int num = matrix[i][j];
+                        System.out.print(matrix[i][j] + " ");
+                    }
+                }
+                else{
+                    for (int i = row - 2; i >= 0; i -= 2) {
+                        int num = matrix[i][j];
+                        System.out.print(matrix[i][j] + " ");
+                    }
+                }
+            }
+            System.out.println(" ");
+        }
+        /* Sir er Solution
         for (int i = 0; i < col; i++) {
             for (int j = 0; j < row; j++) {
                 if(i%2!=0){
@@ -26,7 +50,7 @@ class Task1{
                 }
             }
             System.out.println(" ");
-        }
+        }*/
 
     }
 
